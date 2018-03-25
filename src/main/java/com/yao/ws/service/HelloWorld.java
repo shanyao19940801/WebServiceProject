@@ -8,5 +8,5 @@ import javax.servlet.jsp.tagext.PageData;
  */
 @WebService
 public interface HelloWorld {
-    String sayHi(PageData pageData);
+    String sayHi(String param);
 }

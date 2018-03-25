@@ -7,6 +7,9 @@ import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by shanyao on 2018/3/24.
  */
@@ -16,9 +19,11 @@ public class WebServiceClient {
 //        invokeMethod();
         String url = "http://localhost:8088/services/HelloWorld?wsdl";
         String method = "sayHi";
+        Map param = new HashMap();
+        param.put("a","1");
         try {
-            Object result = CxfInvokeUtil.invoke(url,method);
-            System.out.println(result);
+            Object result = CxfInvokeUtil.invoke(url,method,param);
+            System.out.println(result.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
