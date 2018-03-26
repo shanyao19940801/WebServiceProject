@@ -17,7 +17,7 @@ public class WebServiceClient {
     public static void main(String[] args) {
 //        client1();
 //        invokeMethod();
-        String url = "http://localhost:8088/services/HelloWorld?wsdl";
+        String url = "http://122.112.245.251/services/HelloWorld?wsdl";
         String method = "sayHi";
         Map param = new HashMap();
         param.put("a","1");
